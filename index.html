@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kairo Martins — Portfólio</title>
+  <meta name="description" content="Kairo Martins — Engenharia de Software, desenvolvimento web e mobile, JavaScript, TypeScript, C# e infraestrutura Linux. Nova Mutum, MT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>try{var t=localStorage.getItem("km-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><span class="loader__text">KM</span></div>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ===== Barra superior ===== -->
+  <header class="nav">
+    <a href="#inicio" class="nav__logo">Kairo<span>.</span></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#sobre" data-group="sobre">Sobre</a></li>
+        <li><a href="#areas" data-group="areas">Áreas</a></li>
+        <li><a href="#projetos" data-group="projetos">Projetos</a></li>
+        <li><a href="#formacao" data-group="formacao">Formação</a></li>
+        <li><a href="#contato" data-group="contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav__tools">
+      <button class="tool" id="sound-toggle" aria-label="Ativar efeitos sonoros" aria-pressed="false" title="Efeitos sonoros">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="off" d="M17 9l5 6M22 9l-5 6"/></svg>
+      </button>
+      <button class="tool" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Tema claro/escuro">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="sun" cx="12" cy="12" r="4.5"/><path class="sun" d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/><path class="moon" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+      </button>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== Apresentação ===== -->
+  <main class="deck">
+
+    <!-- 01 INÍCIO -->
+    <section class="slide hero" id="inicio" data-title="Início" data-group="inicio">
+      <button class="gem gem--1" data-gem="1" aria-label="Gema escondida 1"></button>
+      <div class="slide__inner hero__grid">
+        <div>
+          <span class="status a"><i></i> Disponível para novos projetos</span>
+          <p class="hero__hello a">Olá, eu sou</p>
+          <h1 class="hero__name" aria-label="Kairo Martins">
+            <span class="line"><span class="split">Kairo</span></span>
+            <span class="line"><span class="split outline">Martins</span></span>
+          </h1>
+          <p class="hero__role a">
+            <span>Eu crio</span>
+            <span class="typed" data-words='["soluções tecnológicas","aplicações web","aplicativos mobile","sistemas em C#","servidores Linux","máquinas virtuais"]'></span><span class="caret">|</span>
+          </p>
+          <div class="hero__cta a">
+            <a href="#projetos" class="btn btn--primary magnetic"><span>Ver projetos</span></a>
+            <a href="curriculo-kairo-martins.pdf" download class="btn btn--ghost magnetic"><span>⬇ Baixar currículo</span></a>
+          </div>
+          <p class="hero__loc a">📍 Nova Mutum, Mato Grosso · Disponível para viagens</p>
+        </div>
+        <div class="code a" aria-label="Trecho de código com meu perfil">
+          <div class="code__bar"><i></i><i></i><i></i><span>kairo.ts</span></div>
+          <pre class="code__body"><code id="code"></code><span class="code__caret"></span></pre>
+        </div>
+      </div>
+      <p class="deck-hint a">Use <kbd>↓</kbd> <kbd>↑</kbd>, a rodinha do mouse ou deslize para navegar</p>
+    </section>
+
+    <!-- 02 SOBRE -->
+    <section class="slide" id="sobre" data-title="Sobre mim" data-group="sobre">
+      <div class="slide__inner about__grid">
+        <div class="about__photo a">
+          <button class="gem gem--2" data-gem="2" aria-label="Gema escondida 2"></button>
+          <div class="about__photo-inner">
+            <span>KM</span>
+            <!-- Coloque sua foto nesta pasta com o nome foto.jpeg -->
+            <img src="foto.jpeg" alt="Kairo Martins" onerror="this.remove()" />
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow a">01 — Sobre mim</p>
+          <h2 class="title a">Aprendo <em>fazendo.</em></h2>
+          <p class="lead a">Sou <strong>Kairo Martins</strong>, 23 anos, estudante de Engenharia de Software e apaixonado por resolver problemas com tecnologia.</p>
+          <p class="text a">Desenvolvo aplicações web e aplicativos mobile com JavaScript, TypeScript e C#, e cuido da infraestrutura dos meus próprios projetos: servidores Linux, máquinas virtuais, VPS e hospedagem de sites. Aprendi muito mais fazendo do que em sala de aula: são anos colocando a mão na massa, construindo projetos reais e resolvendo problemas sob pressão.</p>
+          <div class="stats">
+            <div class="stat a"><strong><span data-count="5">0</span>+</strong><span>anos de experiência prática</span></div>
+            <div class="stat a"><strong><span data-count="3">0</span></strong><span>linguagens: JS, TS e C#</span></div>
+            <div class="stat a"><strong><span data-count="5">0</span>+</strong><span>projetos desenvolvidos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ÁREAS -->
+    <section class="slide" id="areas" data-title="O que eu faço" data-group="areas">
+      <div class="slide__inner">
+        <p class="eyebrow a">02 — Áreas</p>
+        <h2 class="title a">O que eu <em>faço.</em></h2>
+        <div class="areas">
+          <article class="card a" style="--hue: 265">
+            <div class="card__icon">&lt;/&gt;</div>
+            <div>
+              <h3>Desenvolvimento Web</h3>
+              <p>Sites e aplicações com JavaScript e TypeScript, com foco em código limpo e bem tipado.</p>
+              <ul class="tags"><li>JavaScript</li><li>TypeScript</li><li>Web</li></ul>
+            </div>
+          </article>
+          <article class="card a" style="--hue: 150">
+            <div class="card__icon">📱</div>
+            <div>
+              <h3>Aplicativos Mobile</h3>
+              <p>Apps para celular com interfaces simples e funcionais, levando a solução para o bolso do usuário.</p>
+              <ul class="tags"><li>Android</li><li>iOS</li><li>Apps</li></ul>
+            </div>
+          </article>
+          <article class="card a" style="--hue: 330">
+            <div class="card__icon">C#</div>
+            <div>
+              <h3>Sistemas em C#</h3>
+              <p>Desenvolvimento de sistemas e aplicações de gestão com C#.</p>
+              <ul class="tags"><li>C#</li><li>.NET</li><li>Sistemas</li></ul>
+            </div>
+          </article>
+          <article class="card a" style="--hue: 190">
+            <button class="gem gem--3" data-gem="3" aria-label="Gema escondida 3"></button>
+            <div class="card__icon">⌁</div>
+            <div>
+              <h3>Infraestrutura & Hospedagem</h3>
+              <p>Servidores Linux, VPS e máquinas virtuais com HestiaCP, do código ao domínio no ar.</p>
+              <ul class="tags"><li>Linux</li><li>VPS</li><li>VMs</li><li>HestiaCP</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 PROJETOS (visão geral) -->
+    <section class="slide" id="projetos" data-title="Projetos" data-group="projetos">
+      <div class="slide__inner">
+        <p class="eyebrow a">03 — Projetos</p>
+        <h2 class="title a">Coisas que eu <em>construí.</em></h2>
+        <p class="text a">Escolha um projeto ou siga em frente para ver um por um.</p>
+        <div class="tiles">
+          <a href="#meme-studio" class="tile a" style="--hue: 45"><span class="tile__icon">😂</span><strong>Meme Studio</strong><small>Aplicativo</small></a>
+          <a href="#voxelion" class="tile a" style="--hue: 280"><span class="tile__icon">🎮</span><strong>Voxelion</strong><small>Jogo</small></a>
+          <a href="#kairoware" class="tile a" style="--hue: 200"><span class="tile__icon">🌐</span><strong>Kairoware</strong><small>Site</small></a>
+          <a href="#emarkt" class="tile a" style="--hue: 140"><span class="tile__icon">🛒</span><strong>eMarkt</strong><small>Sistema PDV</small></a>
+          <a href="#kairo-iptv" class="tile a" style="--hue: 350"><span class="tile__icon">📺</span><strong>Kairo IPTV</strong><small>Streaming</small></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UM SLIDE POR PROJETO -->
+    <section class="slide project" id="meme-studio" data-title="Meme Studio" data-group="projetos" style="--hue: 45">
+      <div class="slide__inner work">
+        <div class="work__visual a"><span class="work__icon">😂</span><span class="work__big">MEME</span></div>
+        <div class="work__body">
+          <p class="eyebrow a">Projeto 01 / 05 · Aplicativo</p>
+          <h2 class="title a">Meme Studio</h2>
+          <p class="text a">Editor para criar memes de forma rápida e divertida: escolha uma imagem, adicione textos e compartilhe em segundos.</p>
+          <ul class="tags a"><li>Mobile</li><li>Editor de imagens</li><li>UI/UX</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide project" id="voxelion" data-title="Voxelion" data-group="projetos" style="--hue: 280">
+      <div class="slide__inner work">
+        <div class="work__visual a"><span class="work__icon">🎮</span><span class="work__big">VOX</span></div>
+        <div class="work__body">
+          <p class="eyebrow a">Projeto 02 / 05 · Jogo</p>
+          <h2 class="title a">Voxelion</h2>
+          <p class="text a">Jogo em estilo voxel com mundo construído em blocos, explorando mecânicas de exploração e construção.</p>
+          <ul class="tags a"><li>Game dev</li><li>Voxel</li><li>3D</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide project" id="kairoware" data-title="Kairoware" data-group="projetos" style="--hue: 200">
+      <div class="slide__inner work">
+        <div class="work__visual a"><span class="work__icon">🌐</span><span class="work__big">KW</span></div>
+        <div class="work__body">
+          <p class="eyebrow a">Projeto 03 / 05 · Site & Infraestrutura</p>
+          <h2 class="title a">Kairoware</h2>
+          <p class="text a">Site da Kairoware, desenvolvido e hospedado por mim em servidor VPS Linux com HestiaCP, do código ao domínio.</p>
+          <ul class="tags a"><li>Web</li><li>VPS</li><li>HestiaCP</li></ul>
+          <a href="https://kairoware.com" target="_blank" rel="noopener" class="btn btn--primary magnetic a"><span>Visitar kairoware.com ↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide project" id="emarkt" data-title="eMarkt" data-group="projetos" style="--hue: 140">
+      <div class="slide__inner work">
+        <div class="work__visual a"><span class="work__icon">🛒</span><span class="work__big">PDV</span><button class="gem gem--4" data-gem="4" aria-label="Gema escondida 4"></button></div>
+        <div class="work__body">
+          <p class="eyebrow a">Projeto 04 / 05 · Sistema</p>
+          <h2 class="title a">eMarkt</h2>
+          <p class="text a">Sistema de PDV para mercados: registro de vendas, controle de caixa, pagamentos em várias modalidades e gestão de produtos.</p>
+          <ul class="tags a"><li>PDV</li><li>Gestão de estoque</li><li>Sistema</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide project" id="kairo-iptv" data-title="Kairo IPTV Player" data-group="projetos" style="--hue: 350">
+      <div class="slide__inner work">
+        <div class="work__visual a"><span class="work__icon">📺</span><span class="work__big">IPTV</span></div>
+        <div class="work__body">
+          <p class="eyebrow a">Projeto 05 / 05 · Streaming</p>
+          <h2 class="title a">Kairo IPTV Player</h2>
+          <p class="text a">Player de IPTV para assistir canais, filmes e séries a partir de listas, com uma interface simples e organizada por categorias.</p>
+          <ul class="tags a"><li>Streaming</li><li>Player de vídeo</li><li>Listas M3U</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section class="slide" id="formacao" data-title="Formação" data-group="formacao">
+      <div class="slide__inner">
+        <p class="eyebrow a">04 — Formação</p>
+        <h2 class="title a">Estudo <em>e prática.</em></h2>
+        <div class="edu">
+          <div class="edu__item edu__item--main a">
+            <span class="edu__badge">Em andamento</span>
+            <h3>Engenharia de Software</h3>
+            <p>Uniasselvi — Graduação · Abr/2026 — atual</p>
+          </div>
+          <div class="edu__item a">
+            <h3>JavaScript e TypeScript — do básico ao avançado</h3>
+            <p>Udemy · 146h · 2026</p>
+          </div>
+          <div class="edu__item a">
+            <h3>C# completo — curso prático + projetos</h3>
+            <p>Udemy · 27h · 2025</p>
+          </div>
+        </div>
+        <blockquote class="quote a">“Os cursos me deram a base. Os projetos reais me deram a experiência.”</blockquote>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="slide" id="habilidades" data-title="Habilidades" data-group="formacao">
+      <div class="slide__inner">
+        <p class="eyebrow a">05 — Habilidades</p>
+        <h2 class="title a">Minha <em>caixa de ferramentas.</em></h2>
+        <div class="skills">
+          <div class="skill-group a"><h3><span>⌨</span> Linguagens</h3><div class="chips"><span class="chip chip--tech">JavaScript</span><span class="chip chip--tech">TypeScript</span><span class="chip chip--tech">C#</span></div></div>
+          <div class="skill-group a"><h3><span>📱</span> Web, Mobile & Jogos</h3><div class="chips"><span class="chip chip--tech">Aplicações web</span><span class="chip chip--tech">Apps mobile</span><span class="chip chip--tech">Jogos</span></div></div>
+          <div class="skill-group a"><h3><span>🖥</span> Infraestrutura</h3><div class="chips"><span class="chip chip--tech">Linux</span><span class="chip chip--tech">VPS</span><span class="chip chip--tech">Máquinas virtuais</span><span class="chip chip--tech">HestiaCP</span><span class="chip chip--tech">Hospedagem de sites</span></div></div>
+          <div class="skill-group a"><h3><span>🤝</span> Pessoas</h3><div class="chips"><span class="chip">Comunicação</span><span class="chip">Liderança</span><span class="chip">Resolução de problemas</span><span class="chip">Proatividade</span><span class="chip">Negociação</span><span class="chip">Adaptabilidade</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="slide contact" id="contato" data-title="Contato" data-group="contato">
+      <div class="slide__inner contact__grid">
+        <div>
+          <p class="eyebrow a">06 — Contato</p>
+          <h2 class="contact__big a">Vamos <em>trabalhar</em> juntos?</h2>
+          <p class="contact__alt a">Escreva direto para <a href="mailto:kairo.martins18@hotmail.com">kairo.martins18@hotmail.com</a></p>
+          <ul class="socials a">
+            <li><a href="https://wa.me/5565992661976" target="_blank" rel="noopener">WhatsApp ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/kairo-martins-762b87190" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://instagram.com/kairo.mt" target="_blank" rel="noopener">Instagram ↗</a></li>
+            <li><a href="https://kairoware.com" target="_blank" rel="noopener">Kairoware ↗</a></li>
+          </ul>
+        </div>
+        <form class="form a" id="contact-form">
+          <div class="form__row">
+            <label><span>Seu nome</span><input name="nome" required autocomplete="name" placeholder="Como posso te chamar?" /></label>
+            <label><span>Seu e-mail</span><input name="email" type="email" required autocomplete="email" placeholder="voce@email.com" /></label>
+          </div>
+          <label><span>Mensagem</span><textarea name="msg" rows="4" required placeholder="Conte sobre o seu projeto ou oportunidade…"></textarea></label>
+          <button type="submit" class="btn btn--primary magnetic"><span>Enviar mensagem ✉</span></button>
+        </form>
+      </div>
+      <p class="footer">© <span id="year"></span> Kairo Martins dos Santos · Nova Mutum, MT <button class="gem gem--5" data-gem="5" aria-label="Gema escondida 5"></button></p>
+    </section>
+  </main>
+
+  <!-- ===== Controles da apresentação ===== -->
+  <nav class="dots" aria-label="Slides"></nav>
+  <div class="deck-ctrl">
+    <button id="prev" aria-label="Slide anterior">↑</button>
+    <span class="deck-ctrl__count"><b id="cur">01</b> / <span id="total">12</span></span>
+    <button id="next" aria-label="Próximo slide">↓</button>
+  </div>
+
+  <!-- ===== Camada de jogo ===== -->
+  <div class="hud" aria-live="polite">
+    <div class="hud__level" title="Seu nível"><small>Nv</small><strong id="hud-level">1</strong></div>
+    <div class="hud__info">
+      <div class="hud__row"><span id="hud-title">Visitante</span><span id="hud-xp">0 XP</span></div>
+      <div class="hud__bar"><i id="hud-bar"></i></div>
+    </div>
+    <button class="hud__btn" id="hud-open" aria-label="Ver conquistas">🏆<span id="hud-count">0</span></button>
+  </div>
+  <div class="toasts" aria-live="polite"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+    <div class="panel__box">
+      <button class="panel__close" aria-label="Fechar">✕</button>
+      <h2 id="panel-title">Conquistas</h2>
+      <p class="panel__sub">Passe pelos slides para ganhar XP e subir de nível. Há <strong>5 gemas</strong> escondidas pela apresentação. Consegue achar todas?</p>
+      <div class="panel__stats">
+        <div><strong id="p-level">1</strong><span>nível</span></div>
+        <div><strong id="p-xp">0</strong><span>XP</span></div>
+        <div><strong id="p-gems">0/5</strong><span>gemas</span></div>
+        <div><strong id="p-pct">0%</strong><span>completo</span></div>
+      </div>
+      <ul class="ach" id="ach-list"></ul>
+      <button class="panel__reset" id="reset">Recomeçar progresso</button>
+    </div>
+  </div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
